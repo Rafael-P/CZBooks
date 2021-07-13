@@ -50,12 +50,12 @@ namespace Senai_CZBooks_webAPI
 
             // Register the Swagger generator, defining 1 or more Swagger documents
            services.AddSwaggerGen(c => {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "czbooks.webApi", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CZBooks.webApi", Version = "v1" });
             
                 // Set the comments path for the Swagger JSON and UI.
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                c.IncludeXmlComments(xmlPath);
+                //c.IncludeXmlComments(xmlPath);  //comentei pq tava dando erro
             });
 
             services
@@ -111,7 +111,7 @@ namespace Senai_CZBooks_webAPI
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "czbooks.webApi");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "CZBooks.webApi");
                 c.RoutePrefix = string.Empty;
             });
 

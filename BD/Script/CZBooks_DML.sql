@@ -30,3 +30,21 @@ GO
 INSERT INTO instituicoes(nomeInstituicao, endereco, telefone)
 VALUES					('Floreios e Borroes', 'Beco Diagonal', '555777999')
 GO
+
+ALTER TABLE usuarios
+ADD Email VARCHAR(50)
+GO
+
+ALTER TABLE usuarios
+ADD Senha VARCHAR(50)
+GO
+
+UPDATE usuarios
+SET Email = 'adm@adm.com', Senha = '123456'
+WHERE idUsuario = 1
+GO
+
+UPDATE usuarios
+SET Email = 'rafa@email.com', Senha = '123456'
+WHERE idUsuario = 2
+GO
