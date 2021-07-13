@@ -1,0 +1,34 @@
+{
+	"info": {
+		"_postman_id": "b34810be-71eb-490b-94de-bd1e6afb57aa",
+		"name": "Senai_CZBooks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Autores",
+			"item": [
+				{
+					"name": "Autores.Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/autores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

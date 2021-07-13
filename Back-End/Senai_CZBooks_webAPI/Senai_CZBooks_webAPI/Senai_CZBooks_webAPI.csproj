@@ -5,12 +5,39 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Cotrollers\" />
-    <Folder Include="Contexts\" />
+    <Compile Remove="Contexts\**" />
+    <Compile Remove="Cotrollers\**" />
+    <Compile Remove="ViewModels\**" />
+    <Content Remove="Contexts\**" />
+    <Content Remove="Cotrollers\**" />
+    <Content Remove="ViewModels\**" />
+    <EmbeddedResource Remove="Contexts\**" />
+    <EmbeddedResource Remove="Cotrollers\**" />
+    <EmbeddedResource Remove="ViewModels\**" />
+    <None Remove="Contexts\**" />
+    <None Remove="Cotrollers\**" />
+    <None Remove="ViewModels\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Contexts\CZBooksContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Domains\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="ViewModels\" />
-    <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.11.1" />
   </ItemGroup>
 
 </Project>
